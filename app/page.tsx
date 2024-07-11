@@ -19,7 +19,10 @@ export default function Home() {
   return (
     <>
       <div className="container mx-auto py-10">
-        <Button text={'Add to Cart'}></Button>
+        <Button
+          text={'Add to Cart'}
+          onClick={() => window.fbq('track', 'AddToCart', { test_field: 'TEST_VALUE' }, { eventID: 'EVENT_ID' })}
+        ></Button>
       </div>
     </>
   );
