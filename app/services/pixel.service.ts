@@ -1,5 +1,6 @@
 export enum EventType {
   AddToCart = 'AddToCart',
+  Lead = 'Lead'
 }
 
 export default class Pixel {
