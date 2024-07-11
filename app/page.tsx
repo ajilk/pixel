@@ -1,8 +1,9 @@
 'use client';
 
 import { Component, ReactNode } from 'react';
+import Pixel, { EventType } from './services/pixel.service';
 
-class Button extends Component<{ text: string; onClick?: () => {} }> {
+class Button extends Component<{ text: string; onClick?: () => void }> {
   render(): ReactNode {
     return (
       <button
@@ -16,14 +17,14 @@ class Button extends Component<{ text: string; onClick?: () => {} }> {
 }
 
 export default function Home() {
+  const pixel: Pixel = new Pixel();
+
   return (
-    <>
-      <div className="container mx-auto py-10">
-        <Button
-          text={'Add to Cart'}
-          onClick={() => window.fbq('track', 'AddToCart', { test_field: 'TEST_VALUE' }, { eventID: 'EVENT_ID' })}
-        ></Button>
-      </div>
-    </>
+    <div className="container mx-auto py-10">
+      <Button
+        text={'Add to Cart'}
+        onClick={() => pixel.fbq(EventType.AddToCart, { test_field: 'TEST_VALUE' }, { eventID: 'EVENT_ID' })}
+      ></Button>
+    </div>
   );
 }

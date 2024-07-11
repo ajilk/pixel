@@ -2,6 +2,6 @@ export {};
 
 declare global {
   interface Window {
-    fbq: any;
+    fbq: (method: string, event_name: string, metadata?: any, event_properties?: any) => void;
   }
 }
