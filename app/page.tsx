@@ -1,14 +1,26 @@
-'use client'
+'use client';
 
-import { Component, ReactNode } from "react"
+import { Component, ReactNode } from 'react';
 
-class A extends Component {
+class Button extends Component<{ text: string; onClick?: () => {} }> {
   render(): ReactNode {
-    return <h1>hello</h1>
+    return (
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg w-max"
+        onClick={this.props.onClick}
+      >
+        {this.props.text}
+      </button>
+    );
   }
 }
 
 export default function Home() {
-  const items: A[] = [1, 2, 3].map((v: number) => new A({}));
-  return items.map(v => v.render());
+  return (
+    <>
+      <div className="container mx-auto py-10">
+        <Button text={'Add to Cart'}></Button>
+      </div>
+    </>
+  );
 }
