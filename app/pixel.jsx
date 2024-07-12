@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { PIXEL_ID } from './constants';
 
 const Pixel = () => {
   useEffect(() => {
@@ -20,7 +21,7 @@ const Pixel = () => {
       s = b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t, s);
     })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '8384536118246004');
+    fbq('init', PIXEL_ID);
     fbq('track', 'PageView');
   }, []);
 
