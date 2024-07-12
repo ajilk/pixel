@@ -41,17 +41,17 @@ export default function Page() {
   return (
     <div>
       <Pixel></Pixel>
-      <p className="text-gray-500 pb-5">Description of Scroll</p>
+      <p className="text-gray-500 pb-5">notice: AD_ID is the same, will be deduplicated</p>
       <div className="overflow-auto border" style={{ height: '500px' }}>
         <div>
           <div
             ref={targetRef}
             className={
-              'my-96 mx-auto text-center text-white align-baseline w-80 h-80 ' +
+              'flex justify-center items-center my-96 mx-auto w-80 h-80 text-white ' +
               (visible ? 'bg-blue-500' : 'bg-red-500')
             }
           >
-            {visible ? 'Visible' : 'Not Visible'}
+            <span className="text-3xl font-mono">{visible ? 'Visible' : 'Not Visible'}</span>
           </div>
         </div>
       </div>
