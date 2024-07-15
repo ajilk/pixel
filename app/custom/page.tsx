@@ -27,7 +27,10 @@ export default function Home() {
   return (
     <div>
       <Pixel></Pixel>
-      <p className="text-gray-500 pb-5">Description of Custom Events</p>
+      <p className="text-gray-500 pb-5">
+        Custom events are actions that <b>fall outside those covered by our standard events.</b> You can give them a
+        unique name to represent the action taking place
+      </p>
       <div className="grid grid-cols-5 gap-2">
         <input
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"

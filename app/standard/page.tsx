@@ -38,7 +38,10 @@ export default function Home() {
   return (
     <div>
       <Pixel></Pixel>
-      <p className="text-gray-500 pb-5">Description of Standard Events</p>
+      <p className="text-gray-500 pb-5">
+        Standard events are <b>predefined by Meta </b>and can be used to <b>log</b> conversions, <b>optimize</b> for
+        conversions and <b>build </b>audiences
+      </p>
       <div className="grid grid-cols-3 gap-10">
         <div className="grid grid-rows-2 gap-1">
           <label className="font-semibold my-auto">Item</label>

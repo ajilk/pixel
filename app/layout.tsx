@@ -82,22 +82,27 @@ export default function RootLayout({
             })}
           </ul>
           <div className="pt-10">{children}</div>
-          <h1 className="text-2xl font-thin pt-5">Events</h1>
-          <p className="text-gray-500">Triggered events will show up here</p>
-          <div className="pt-3">
-            {events.map((event, i) => {
-              return (
-                <div
-                  key={i}
-                  className="flex items-center w-full p-4 mb-3 bg-white rounded-lg shadow-md border"
-                  role="alert"
-                >
-                  <span className="pe-5">{new Date(Date.now()).toLocaleString()}</span>
-                  <pre>{JSON.stringify(event, null, 2)}</pre>
-                </div>
-              );
-            })}
-          </div>
+          {path != '/' && (
+            <>
+              <h1 className="text-2xl font-thin pt-10">Events</h1>
+              <p className="text-gray-500">Triggered events will show up here</p>
+              <hr className='mt-2'></hr>
+              <div className="pt-3">
+                {events.map((event, i) => {
+                  return (
+                    <div
+                      key={i}
+                      className="flex items-center w-full p-4 mb-3 bg-white rounded-lg shadow-md border"
+                      role="alert"
+                    >
+                      <span className="pe-5">{new Date(Date.now()).toLocaleString()}</span>
+                      <pre>{JSON.stringify(event, null, 2)}</pre>
+                    </div>
+                  );
+                })}
+              </div>
+            </>
+          )}
         </div>
       </body>
     </html>
