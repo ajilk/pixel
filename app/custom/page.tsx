@@ -15,7 +15,7 @@ export default function Home() {
     window.fbq('track', EventType.Custom, { f1: f1, f2: f2, f3: f3, f4: f4 }, { eventID: eventID });
 
     let events: any[] = JSON.parse(localStorage.getItem('events') ?? '[]');
-    events.unshift({ name: EventType.AddToCart, metadata: { f1: f1, f2: f2, f3: f3, f4: f4 }, eventID: eventID });
+    events.unshift({ name: EventType.Custom, metadata: { f1: f1, f2: f2, f3: f3, f4: f4 }, eventID: eventID });
     localStorage.setItem('events', JSON.stringify(events));
     window.dispatchEvent(new Event('storage'));
 
