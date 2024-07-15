@@ -33,13 +33,13 @@ export default function RootLayout({
   ];
 
   useEffect(() => {
+    localStorage.removeItem('events');
+
     window.addEventListener('storage', (e) => {
       setEvents(JSON.parse(localStorage.getItem('events') ?? '[]'));
     });
-    return () => {
-      localStorage.removeItem('events');
-      window.removeEventListener('storage', (e) => setEvents([]));
-    };
+
+    return () => window.removeEventListener('storage', (e) => setEvents([]));
   }, []);
 
   return (
