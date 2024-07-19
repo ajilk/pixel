@@ -42,8 +42,8 @@ export default function Page() {
     <div>
       <Pixel></Pixel>
       <p className="text-gray-500 pb-5">
-        An event can be triggered when a user <b>performs an action</b> on a website, such as{' '}
-        <b>scrolling to view specific content.</b> For instance, we can trigger the <b>ViewContent</b> standard event
+        An event can be triggered when a user <b>performs an action</b> on a website, such as
+        <b> scrolling to view specific content.</b> For instance, we can trigger the <b>ViewContent</b> standard event
         when the content is fully or partially visible, and it won't cause any problems if it's triggered multiple times
         when the user views the content multiple times. This is because Meta will remove duplicate events based on their
         unique event IDs. For example, the following event will be <b>deduplicated</b> because it has the same event ID
