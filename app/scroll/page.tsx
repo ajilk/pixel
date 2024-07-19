@@ -42,11 +42,12 @@ export default function Page() {
     <div>
       <Pixel></Pixel>
       <p className="text-gray-500 pb-5">
-        <b>ViewContent </b>is a standard event that can be <b>triggered </b>when a user{' '}
-        <b>scrolls to specific content.</b> The event can be triggered when the content is fully or partially visible,
-        and it will not cause any issues if it is triggered multiple times when the user views the content multiple
-        times. This is because <b>Meta will deduplicate events </b>based on their <b>unique event IDs</b>. For example,
-        below event will be deduplicated because it has the same event id (AD_ID).
+        An event can be triggered when a user <b>performs an action</b> on a website, such as{' '}
+        <b>scrolling to view specific content.</b> For instance, we can trigger the <b>ViewContent</b> standard event
+        when the content is fully or partially visible, and it won't cause any problems if it's triggered multiple times
+        when the user views the content multiple times. This is because Meta will remove duplicate events based on their
+        unique event IDs. For example, the following event will be <b>deduplicated</b> because it has the same event ID
+        (AD_ID).
       </p>
       <div className="overflow-auto border" style={{ height: '500px' }}>
         <div>
